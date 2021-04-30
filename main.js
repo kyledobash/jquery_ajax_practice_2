@@ -1,11 +1,6 @@
-$(function() {
-
-    $.ajax({
-        type: 'GET',
-        url: 'https://pokeapi.co/api/v2/pokemon/' + pokeSearchInput,
-        success: function(res) {
-            console.log(res);
-            alert(res);
-        }
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+    .then(response => response.json())
+    .then(data => {
+        dataObj = data;
+        console.log(dataObj)
     });
-});
